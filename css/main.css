@@ -1,0 +1,99 @@
+
+@import url('https://fonts.googleapis.com/css?family=Dosis|Griffy');
+
+/*font-family: 'Griffy', cursive;
+font-family: 'Dosis', sans-serif;*/
+
+/*.navbar navbar-inverse navbar-fixed-top {
+	text-align: center;
+}*/
+
+.navbar-inverse {
+	background-color: #FFFF99;
+	border-color: #FFFF99;
+}
+
+.navbar-inverse .navbar-brand  {
+	font-family: 'Dosis', sans-serif;
+	font-size: 25px;
+	color: #000000;
+	font-weight: bold;
+}
+
+.navbar-inverse .navbar-nav>li>a {
+	font-family: 'Dosis', sans-serif;
+	font-size: 20px;
+	color: #000000;
+	font-weight: bold;
+}
+
+
+.page-header {
+	font-family: 'Griffy', cursive;
+	color: #FFFF99;
+	font-weight: bold;
+}
+
+h1 small {
+	color: #FFFF99;	
+}
+
+body {
+	background-image: url(../images/constellation.jpeg);
+}
+
+footer {
+	font-family:'Dosis', sans-serif;
+	font-size: 20px;
+	color: #FFFF99;
+}
+
+.form-input {
+	display: inline-block;
+	text-align: center;
+	padding-right: 20px;
+	padding-bottom: 30px;
+}
+
+.form-input h1 {
+	font-family: 'Griffy', cursive;
+	color: #FFFF99;
+}
+
+#userinfo {
+	width: 300px;
+	padding: 12px;
+}
+
+.btn-primary {
+	font-family:'Dosis', sans-serif;
+	font-size: 20px;
+	color: #000000;
+	text-transform: uppercase;
+	background-color: #FFFF99;
+}
+
+.pictures img {
+	height: 200px;
+	width: 200px;
+}
+
+.text {
+	font-family: 'Griffy', cursive;
+	color: #FFFF99;
+	padding-bottom: 15px;
+}
+
+.text small {
+	font-family: 'Dosis', sans-serif;
+	color: #FFFF99;
+}
+
+.animated {
+  -webkit-animation-duration: 3s;
+  animation-duration: 3s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+
