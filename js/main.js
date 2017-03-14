@@ -1,6 +1,5 @@
 
-
-var zodiac = [
+	var zodiac = [
 	{
 		sign: "aries",
 		element: "fire",
@@ -75,30 +74,70 @@ var zodiac = [
 	}
 ];
 
-//This function will determine user horoscope based on input:
-function horoscope(){
-	var userdata = document.getElementById("userinfo").value.toLowerCase();//using .value to get the user's input value.
-	document.write(userdata);
 
-//Need to create a for loop. Userinfo to go thru zodiac array.
+function choice(z, e){
+	var row = document.getElementById("choice");
+	var main = document.getElementById("main");
+
+	var div = document.createElement('DIV');
+	var button = document.createElement('DIV');
+	var info = document.createElement('DIV');
+	var ul = document.createElement('UL');
+	var element = document.createElement('LI');
+	var fortune = document.createElement('LI');
+	var sign = document.createElement('LI');
+	var stone = document.createElement('LI');
+
+
+	var btnText = document.createTextNode('Pick Again');
+	var elementText = document.createTextNode(z.element);
+	var fortuneText = document.createTextNode(z.fortune);
+	var signText = document.createTextNode(z.sign);
+	var stoneText = document.createTextNode(z.stone);
+
+	element.appendChild(elementText);
+	fortune.appendChild(fortuneText);
+	sign.appendChild(signText);
+	stone.appendChild(stoneText);
+
+
+	ul.appendChild(element);
+	ul.appendChild(fortune);
+	ul.appendChild(sign);
+	ul.appendChild(stone);
+	ul.classList.add('text-big');
+	info.appendChild(ul);
+
+	info.classList.add("col-xs-8");
+
+	e.classList.remove("col-lg-4");
+	e.classList.remove("col-sm-6");
+	e.classList.add("col-xs-12");
+	e.classList.add("not-clickable");
+
+	button.appendChild(btnText);
+	button.setAttribute("onclick", "reset()");
+
+	button.className += " btn btn-lg btn-default col-xs-6 col-xs-offset-3";
+	div.className += " col-xs-4 text-center";
+
+	div.appendChild(e);
+	div.appendChild(button); 
+
+	row.appendChild(div);
+	row.appendChild(info);
+
+	main.className += " disappear";
+}
+
+function reset(){
+	location.reload();
+}
+
+function process(elm){
 	for(i=0; i<zodiac.length; i++){
-		if(userdata == zodiac[i].sign) {
-			document.write("Here is your request: " + zodiac[i].fortune);
-			document.write("Stone association: " + zodiac[i].stone);
-			document.write("This is your element association: " + zodiac[i].element);
-			return
-		}
-		else {
-			document.write("Please resubmit correct zodiac sign.");
+		if(elm.id === zodiac[i].sign){
+			choice(zodiac[i], elm);
 		}
 	}
 }
-
-
-
-
-
-
-
-
-

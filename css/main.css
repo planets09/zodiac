@@ -84,9 +84,23 @@ footer {
 	padding-bottom: 15px;
 }
 
+.text-big{
+	font-family: 'Griffy', cursive;
+	color: #FFFF99;
+	font-size: 30px;
+}
+
 .text small {
 	font-family: 'Dosis', sans-serif;
 	color: #FFFF99;
+}
+
+.disappear {
+	display: none;
+}
+
+.not-clickable {
+	pointer-events: none;
 }
 
 .animated {

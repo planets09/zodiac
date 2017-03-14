@@ -34,7 +34,7 @@
     <!-- Navigation -->
     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <div class="container">
-            <!-- Brand and toggle get grouped for better mobile display -->
+            <!-- Mobile display -->
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                     <span class="sr-only">Toggle navigation</span>
@@ -70,27 +70,19 @@
         <div class="row">
             <div class="col-lg-12">
                 <h1 class="page-header">ZODIAC HOROSCOPE
-                    <small> Your past, present and future...</small>
+                    <small> Your past, present and future...please select icon!</small>
                 </h1>
-            <div>
-                <div class="form-input">
-                    <h1>Please enter your horoscope sign</h1>
-                </div>
-                <div class="form-input">
-                    <input id="userinfo">
-                </div>
-                <div class="form-input">
-                    <button type="button" onclick="horoscope()" class="btn btn-primary btn-lg"> submit!</button>
-                </div>
-            </div>
+           
             </div>
         </div>
 
         <!-- Zodiac Row -->
-        <div class="row">
+        <div id="main" class="row">
             <div class="col-lg-12">
             </div>
-            <div class="col-lg-4 col-sm-6 text-center">
+            <!-- using (.this) to identify whatever element you're clicking. Next, you're 
+            passing the element to the JS code.  -->
+            <div id="aries" onclick="process(this)" class="col-lg-4 col-sm-6 text-center">
                 <div class="pictures animated infinite pulse">
                     <img src= "images/aries.png" alt="horoscope" class="img-circle img-responsive img-center">
                 </div>
@@ -101,7 +93,7 @@
                 </div>
             </div>
 
-            <div class="col-lg-4 col-sm-6 text-center">
+            <div id="taurus" onclick="process(this)" class="col-lg-4 col-sm-6 text-center">
                 <div class="pictures animated infinite pulse">
                     <img src= "images/taurus.png" alt="horoscope"  class="img-circle img-responsive img-center">
                 </div>
@@ -112,7 +104,7 @@
                 </div>
             </div>
 
-            <div class="col-lg-4 col-sm-6 text-center">
+            <div id="gemini" onclick="process(this)" class="col-lg-4 col-sm-6 text-center">
                 <div class="pictures animated infinite pulse">
                     <img src="images/gemini.png" alt="horoscope" class="img-circle img-responsive img-center">
                 </div>
@@ -123,7 +115,7 @@
                 </div>
             </div>
 
-            <div class="col-lg-4 col-sm-6 text-center">
+            <div id="cancer" onclick="process(this)" class="col-lg-4 col-sm-6 text-center">
                 <div class="pictures animated infinite pulse">
                     <img src="images/cancer.png" alt="horoscope" class="img-circle img-responsive img-center">
                 </div>
@@ -133,7 +125,7 @@
                     </h3> 
                 </div>
             </div>
-            <div class="col-lg-4 col-sm-6 text-center">
+            <div id="leo" onclick="process(this)" class="col-lg-4 col-sm-6 text-center">
                 <div class="pictures animated infinite pulse">
                     <img src="images/leo.png" alt="" class="img-circle img-responsive img-center" >
                 </div>
@@ -144,7 +136,7 @@
                 </div>
             </div>
 
-            <div class="col-lg-4 col-sm-6 text-center">
+            <div id="virgo" onclick="process(this)" class="col-lg-4 col-sm-6 text-center">
                 <div class="pictures animated infinite pulse">
                     <img src="images/virgo.png" alt="horoscope" class="img-circle img-responsive img-center" >
                 </div>
@@ -157,7 +149,7 @@
 
             <div class="col-lg-12">
             </div>
-            <div class="col-lg-4 col-sm-6 text-center">
+            <div id="libra" onclick="process(this)" class="col-lg-4 col-sm-6 text-center">
                 <div class="pictures animated infinite pulse">
                     <img src="images/libra.png" alt="horoscope" class="img-circle img-responsive img-center"> 
                 </div>
@@ -168,7 +160,7 @@
                 </div>
             </div>
 
-            <div class="col-lg-4 col-sm-6 text-center">
+            <div id="scorpio" onclick="process(this)" class="col-lg-4 col-sm-6 text-center">
                 <div class="pictures animated infinite pulse">
                 <img src="images/scorpio.png" alt="horoscope" class="img-circle img-responsive img-center" >   
                 </div>
@@ -179,7 +171,7 @@
                 </div>
             </div>
 
-            <div class="col-lg-4 col-sm-6 text-center">
+            <div id="sagittarius" onclick="process(this)" class="col-lg-4 col-sm-6 text-center">
                 <div class="pictures animated infinite pulse">
                     <img src="images/sagitarous.png" alt="horoscope" class="img-circle img-responsive img-center">
                 </div>
@@ -190,7 +182,7 @@
                 </div>
             </div>
 
-            <div class="col-lg-4 col-sm-6 text-center">
+            <div id="capricorn" onclick="process(this)" class="col-lg-4 col-sm-6 text-center">
                 <div class="pictures animated infinite pulse">
                     <img src="images/capricorn.png" alt="horoscope" class="img-circle img-responsive img-center">  
                 </div>
@@ -201,7 +193,7 @@
                 </div> 
             </div>
 
-            <div class="col-lg-4 col-sm-6 text-center">
+            <div id="aquarius" onclick="process(this)" class="col-lg-4 col-sm-6 text-center">
                 <div class="pictures animated infinite pulse">
                   <img src="images/aquarius.png" alt="horoscope"  class="img-circle img-responsive img-center">  
                 </div>
@@ -212,7 +204,7 @@
                 </div>  
             </div>
 
-            <div class="col-lg-4 col-sm-6 text-center">
+            <div id="pisces" onclick="process(this)" class="col-lg-4 col-sm-6 text-center">
                 <div class="pictures animated infinite pulse">
                  <img src="images/pisces.png" alt="horoscope"  class="img-circle img-responsive img-center"> 
                 </div>
@@ -224,6 +216,11 @@
             </div>
         </div>
 
+        <div class="row">
+            <div id="choice" class="col-lg-12">
+               
+            </div>
+        </div>
 
         <hr>
 
